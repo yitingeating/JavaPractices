@@ -31,6 +31,7 @@ public class RobotInstructions  {
 		 * eg. if you want to move 50 pixels forward, code: robot.forward(50);
 		 *     if you want to turn left 90 degrees, code: roo.turnLeft(90);
 		 */
+		robot.forward(30);
 	}
 
 }
