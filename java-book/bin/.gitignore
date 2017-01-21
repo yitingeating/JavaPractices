@@ -1,4 +1,5 @@
 /ListItem.class
+/Magic8Ball.class
 /arch/
 /arrays/
 /biofindframe/
@@ -9,6 +10,8 @@
 /conway/
 /cse131/
 /ex1_4/
+/ex4_2.class
+/exension4_2.class
 /eyeballs/
 /imageprocessor/
 /imagetransforms/
@@ -29,6 +32,7 @@
 /lists/
 /matrix/
 /morelists/
+/myLinkedList.class
 /recursivepatterns/
 /robot/
 /sedgewick/
@@ -43,7 +47,3 @@
 /studio9/
 /trees/
 /watermelons/
-/Magic8Ball.class
-/ex4_2.class
-/exension4_2.class
-/myLinkedList.class
