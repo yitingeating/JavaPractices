@@ -30,6 +30,24 @@ public class Swap {
 		a = b;
 		b = tmp;
 		System.out.println("a = " + a + "," + "b = " + b +"," + "c = " + c);
+		
+		//how to make the variables no long from hard code, but from command line input?
+		int commandLineInputA = Integer.valueOf(args[0]);
+		
+		//there are two methods to convert a String to a integer if possible"
+		// a. int number = Integer.valueOf(numStr);
+		// b. int number = Integer.parseInt(numStr);
+		int commandLineInputB = Integer.valueOf(args[1]); 
+		
+		// when you want to run this type of java app, right click on the .java file and click on 'Run as' -> 'Run Configuration'
+		// -> switch to 'Arguments' tab on the right panel. Inside the 'Programming Variable' text area, type the two inputs variable 
+		// separated by space. Please notice that these varibales will build up the string array. So you might need to convert
+		// the data type from string to whatever you want.
+		
+		int commandLineTmp = commandLineInputA;
+		commandLineInputA = commandLineInputB;
+		commandLineInputB = commandLineTmp;
+		System.out.println(String.format("arg A is now: %s an arg B is now: %s", commandLineInputA, commandLineInputB));
 	}
 
 }
