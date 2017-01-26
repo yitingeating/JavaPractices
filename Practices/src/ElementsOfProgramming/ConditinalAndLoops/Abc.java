@@ -3,7 +3,7 @@ package ElementsOfProgramming.ConditinalAndLoops;
 public class Abc {
 
 	public static void main(String[] args) {
-		int a = 1,b = 2,c = 3;
+		int a = 1, b = 2, c = 3;
 		int test = 2;
 		if (test == 1)
 		System.out.print("a");
