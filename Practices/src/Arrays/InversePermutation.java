@@ -4,18 +4,39 @@ public class InversePermutation {
 
 	public static void main(String[] args) {
 		int n = args.length;
-		int a [] = new int [5];
-		//int b [] = new int [5];
-		for (int i = 0; i < 5; i++){
-			int b = a[i];
-			//b[a[i]] = a[i];
-			a[i] = Integer.parseInt(args[i]);
-			if (a[i] < 0 || a[i] >9 ||a[i] != i || )
-				System.out.print("这个不行！！╭(╯^╰)╮");
+		int[] permutation = new int [n];
+		
+		//Build up the permutation array;
+		for (int i = 0; i < n; i++) {
+			permutation[i] = Integer.parseInt(args[i]);
 		}
+		
+		//check permutation
+		//A permutation here means an array that containing digits from 1 to n - 1.
+		//All the numbers in that range should appear exactly once, no one missed, no one duplicated.
+		//To check it, we can build up a visited array which is a boolean array to check whether an element is duplicated
+		//and after traversing, check if the boolean array is all true.
+		boolean[] visited = new boolean[n];
+		for (int i = 0; i < n; i++) {
+			if (!visited[permutation[i]]) visited[permutation[i]] = true;
+			else {
+				//if we visited one element for a second time, then this permutation isn't valid
+				System.out.println(permutation[i] + " is duplicated");
+				return;
+			}
+		}
+		
+		for (int i = 0; i < n; i++) {
+			if (!visited[i]) {
+				System.out.println(i + " is missed from the permutation");
+				return;
+			}
+		}
+		
 		int[] ainv = new int[n];
-        for (int i = 0; i < n; i++)
-            ainv[a[i]] = i;
+        for (int i = 0; i < n; i++) {
+        	ainv[permutation[i]] = i;
+        }
 
 
         // print out
