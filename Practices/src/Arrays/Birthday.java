@@ -21,9 +21,7 @@ public class Birthday {
 			for (int n = 0; n < 365; n++) {
 				sum += people[n]; 
 			}			
-		}
-		double ave = sum/365.0;
-		System.out.print(ave); 
+		} 
 	}
 /*	public static void main(String[] args) {
 		int date[] = new int[365];
