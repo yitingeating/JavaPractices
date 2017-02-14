@@ -2,21 +2,20 @@ package StaticMethods;
 import java.util.*;
 
 public class Admit {
-
-	public static void compare(Scanner console){
-		state();
-		double p1 = compute(console, 1);
-		double p2 = compute(console, 2);
-		System.out.printf("First applicant overall score  = " + "%.1f", p1);
-		System.out.println();
-		System.out.printf("Second applicant overall score  = " + "%.1f", p2);
-		System.out.println();
+	
+	public static final String[] words = new String[] {"First", "Second", "Third"};
+	
+	public static void compare(double p1, double p2){
 		if (p1 > p2)
 			System.out.println("The first applicant seems to be better");
 		else if(p1 < p2)
 			System.out.println("The second applicant seems to be better");
 		else
 			System.out.println("The two applicants seem to be equal");	
+	}
+	
+	public static void print(int applicantNbr, double score) {
+		System.out.printf("%s  overall score = %.1f \n", applicantNbr, score);
 	}
 	
 	public static double compute(Scanner console, int applicantNbr){
@@ -85,7 +84,17 @@ public class Admit {
 	}
 	
 	public static void main(String[] args) {
+		state();
 		Scanner console = new Scanner(System.in);
-		compare(console);
+		
+		double p1 = compute(console, 1);
+		double p2 = compute(console, 2);
+		print(1, p1);
+		print(2, p2);
+		compare(p1, p2);
+		
+		double p3 = compute(console, 3);
+		print(3, p3);
+
 	}
 }
