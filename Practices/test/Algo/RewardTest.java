@@ -19,4 +19,11 @@ public class RewardTest {
 			System.out.println(a);
 		}
 	}
+	
+	@Test
+	public void test2() {
+		String s = "321abcdEfgHijkkLiINPCNWlmnopqrst41uvwxyz";
+		
+		System.out.println(LongestSubstringOfAtoZ.solve(s));
+	}
 }
